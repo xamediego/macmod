@@ -26,4 +26,6 @@ jobs:
         with:
           context: .
           push: true
-          tags: macmod.azurecr.io/outdoorapi:build-tag-1
+          tags: outdoor.azurecr.io/outdoorapi:build-tag-1
+          build-args: |
+            DATABASE_URL=${{ secrets.SQL_DATABASE }}
