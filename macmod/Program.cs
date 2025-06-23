@@ -1,6 +1,5 @@
 using macmod.bootstrap;
 using macmod.database;
-using macmod.services;
 using macmod.services.implementation;
 using macmod.services.interfaces;
 using Microsoft.EntityFrameworkCore;
@@ -36,6 +35,7 @@ public class MacApi
         });
         
         Console.WriteLine("Configure Database");
+        builder.Configuration["DATABASE_URL"] = Environment.GetEnvironmentVariable("DATABASE_URL") ?? builder.Configuration["DATABASE_URL"];
         var dbConnection = builder.Configuration["DATABASE_URL"] ?? "";
         if (builder.Environment.IsDevelopment())
         {
