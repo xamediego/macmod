@@ -15,10 +15,10 @@ namespace macmod.Migrations
                 name: "GameTypes",
                 columns: table => new
                 {
-                    Id = table.Column<long>(type: "INTEGER", nullable: false)
-                        .Annotation("Sqlite:Autoincrement", true),
-                    Identifier = table.Column<string>(type: "TEXT", nullable: false),
-                    FullName = table.Column<string>(type: "TEXT", nullable: false)
+                    Id = table.Column<long>(type: "bigint", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Identifier = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    FullName = table.Column<string>(type: "nvarchar(max)", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -29,12 +29,12 @@ namespace macmod.Migrations
                 name: "ProjectTypes",
                 columns: table => new
                 {
-                    Id = table.Column<long>(type: "INTEGER", nullable: false)
-                        .Annotation("Sqlite:Autoincrement", true),
-                    Type = table.Column<string>(type: "TEXT", maxLength: 250, nullable: false),
-                    Title = table.Column<string>(type: "TEXT", maxLength: 250, nullable: false),
-                    Thumbnail = table.Column<string>(type: "TEXT", maxLength: 250, nullable: false),
-                    Icon = table.Column<string>(type: "TEXT", maxLength: 250, nullable: false)
+                    Id = table.Column<long>(type: "bigint", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Type = table.Column<string>(type: "nvarchar(250)", maxLength: 250, nullable: false),
+                    Title = table.Column<string>(type: "nvarchar(250)", maxLength: 250, nullable: false),
+                    Thumbnail = table.Column<string>(type: "nvarchar(250)", maxLength: 250, nullable: false),
+                    Icon = table.Column<string>(type: "nvarchar(250)", maxLength: 250, nullable: false)
                 },
                 constraints: table =>
                 {
@@ -45,15 +45,15 @@ namespace macmod.Migrations
                 name: "Projects",
                 columns: table => new
                 {
-                    Id = table.Column<long>(type: "INTEGER", nullable: false)
-                        .Annotation("Sqlite:Autoincrement", true),
-                    Title = table.Column<string>(type: "TEXT", maxLength: 250, nullable: false),
-                    Description = table.Column<string>(type: "TEXT", maxLength: 250, nullable: false),
-                    Version = table.Column<string>(type: "TEXT", maxLength: 250, nullable: false),
-                    Filesize = table.Column<string>(type: "TEXT", maxLength: 250, nullable: false),
-                    ProjectThumbnail = table.Column<string>(type: "TEXT", maxLength: 250, nullable: false),
-                    PublishedDate = table.Column<DateTime>(type: "TEXT", nullable: false),
-                    ProjectTypeId = table.Column<long>(type: "INTEGER", nullable: false)
+                    Id = table.Column<long>(type: "bigint", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Title = table.Column<string>(type: "nvarchar(250)", maxLength: 250, nullable: false),
+                    Description = table.Column<string>(type: "nvarchar(1000)", maxLength: 1000, nullable: false),
+                    Version = table.Column<string>(type: "nvarchar(250)", maxLength: 250, nullable: false),
+                    Filesize = table.Column<string>(type: "nvarchar(250)", maxLength: 250, nullable: false),
+                    ProjectThumbnail = table.Column<string>(type: "nvarchar(250)", maxLength: 250, nullable: false),
+                    PublishedDate = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    ProjectTypeId = table.Column<long>(type: "bigint", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -70,13 +70,13 @@ namespace macmod.Migrations
                 name: "GameMaps",
                 columns: table => new
                 {
-                    Id = table.Column<long>(type: "INTEGER", nullable: false)
-                        .Annotation("Sqlite:Autoincrement", true),
-                    MinimumPlayer = table.Column<int>(type: "INTEGER", nullable: false),
-                    MaximumPlayer = table.Column<int>(type: "INTEGER", nullable: false),
-                    MapEnvironment = table.Column<int>(type: "INTEGER", nullable: false),
-                    GameTypeId = table.Column<long>(type: "INTEGER", nullable: false),
-                    ProjectId = table.Column<long>(type: "INTEGER", nullable: false)
+                    Id = table.Column<long>(type: "bigint", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    MinimumPlayer = table.Column<int>(type: "int", nullable: false),
+                    MaximumPlayer = table.Column<int>(type: "int", nullable: false),
+                    MapEnvironment = table.Column<int>(type: "int", nullable: false),
+                    GameTypeId = table.Column<long>(type: "bigint", nullable: false),
+                    ProjectId = table.Column<long>(type: "bigint", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -99,10 +99,10 @@ namespace macmod.Migrations
                 name: "Images",
                 columns: table => new
                 {
-                    Id = table.Column<long>(type: "INTEGER", nullable: false)
-                        .Annotation("Sqlite:Autoincrement", true),
-                    ImageUrl = table.Column<string>(type: "TEXT", nullable: false),
-                    ProjectId = table.Column<long>(type: "INTEGER", nullable: false)
+                    Id = table.Column<long>(type: "bigint", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    ImageUrl = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    ProjectId = table.Column<long>(type: "bigint", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -119,11 +119,11 @@ namespace macmod.Migrations
                 name: "Link",
                 columns: table => new
                 {
-                    Id = table.Column<long>(type: "INTEGER", nullable: false)
-                        .Annotation("Sqlite:Autoincrement", true),
-                    Provider = table.Column<string>(type: "TEXT", maxLength: 50, nullable: false),
-                    Url = table.Column<string>(type: "TEXT", maxLength: 100, nullable: false),
-                    ProjectId = table.Column<long>(type: "INTEGER", nullable: false)
+                    Id = table.Column<long>(type: "bigint", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Provider = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
+                    Url = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: false),
+                    ProjectId = table.Column<long>(type: "bigint", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -140,10 +140,10 @@ namespace macmod.Migrations
                 name: "ProgrammingProject",
                 columns: table => new
                 {
-                    Id = table.Column<long>(type: "INTEGER", nullable: false)
-                        .Annotation("Sqlite:Autoincrement", true),
-                    Purpose = table.Column<string>(type: "TEXT", maxLength: 100, nullable: false),
-                    ProjectId = table.Column<long>(type: "INTEGER", nullable: false)
+                    Id = table.Column<long>(type: "bigint", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Purpose = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: false),
+                    ProjectId = table.Column<long>(type: "bigint", nullable: false)
                 },
                 constraints: table =>
                 {

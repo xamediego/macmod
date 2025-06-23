@@ -13,17 +13,10 @@ public abstract class DataSeeder
     public static async Task SeedDatabase(IServiceScope serviceScope)
     {
         Console.WriteLine("Seeding Database.......");
-        var database = serviceScope.ServiceProvider.GetRequiredService<DatabaseContext>().Database;
         var dbContext = serviceScope.ServiceProvider.GetRequiredService<DatabaseContext>();
-
-        Console.WriteLine("Restock DB.......");
-        await database.EnsureDeletedAsync();
-        await database.EnsureCreatedAsync();
-
-        await GenerateProjectTypes(dbContext);
         
+        await GenerateProjectTypes(dbContext);
         await GenerateGameTypes(dbContext);
-
         await GenerateMaps(dbContext);
     }
 

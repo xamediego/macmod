@@ -36,7 +36,16 @@ public class MacApi
         });
         
         Console.WriteLine("Configure Database");
-        builder.Services.AddDbContext<DatabaseContext>(options => options.UseSqlite("Data Source=database.db"));
+        var dbConnection = builder.Configuration["DATABASE_URL"] ?? "";
+        if (builder.Environment.IsDevelopment())
+        {
+            builder.Services.AddDbContext<DatabaseContext>(options => options.UseSqlite("Data Source=database.db"));
+        }
+        else
+        {
+            builder.Services.AddDbContext<DatabaseContext>(options => options.UseSqlServer(dbConnection));
+        }
+
         
         // Configure cors
         const string allowedOrigins = "ALLOWED_CORS";
@@ -83,23 +92,6 @@ public class MacApi
         
         //Start building
         var app = builder.Build();
-        
-        //Test DB Connection
-        if (!app.Environment.IsDevelopment())
-        {
-            using var serviceScope = app.Services.GetRequiredService<IServiceScopeFactory>().CreateScope();
-            
-            var dbContext = serviceScope.ServiceProvider.GetRequiredService<DatabaseContext>();
-
-            if (await dbContext.Database.CanConnectAsync())
-            {
-                Console.WriteLine("Can connect to external database");
-            }
-            else
-            {
-                Console.WriteLine("Failed establishing connection to external database");
-            }
-        }
         
         if (app.Environment.IsDevelopment())
         {

@@ -10,7 +10,7 @@ public class Project
     [MaxLength(250)] 
     public string Title { get; set; } = "";
     
-    [MaxLength(250)] 
+    [MaxLength(1000)] 
     public string Description { get; set; } = "";
     
     [MaxLength(250)] 
