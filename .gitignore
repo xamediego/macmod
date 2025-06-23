@@ -1,0 +1,9 @@
+﻿**/.idea/
+**/.vs/
+**/obj/
+**/bin/
+
+**/database.db
+**/database.db-shm
+**/database.db-wal
+/healthmate-auth.sln.DotSettings.user

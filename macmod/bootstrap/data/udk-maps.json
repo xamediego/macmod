@@ -1,0 +1,61 @@
+[
+    {
+      "title": "DM-Derelict",
+      "description": "Remake of the halo map but then for UDK, also made an UT3 version but lost it and can't find it, map is mostly made of BSP\n\nDerelict is a multiplayer map in Halo: Combat Evolved. It is set aboard a Forerunner space station apparently in orbit around Threshold, as the planet is visible through the windows, as well as the moon Basis. It is cataloged by the UNSC as Deep-Space Anomaly #0198. It is a very small level that is best suited for 10 or fewer players, as more can become extremely chaotic unless that is the desired effect.",
+      "version": "2.0",
+      "filesize": "130.8",
+      "publishedDate": "2012-11-15",
+      "projectThumbnail": "ProjectThumbnails/UDK/DM-Derelict/1.jpg",
+      "minimumPlayer": 4,
+      "maximumPlayer": 8,
+      "environment": "SciFi",
+      "gameType": {
+        "Identifier" : "DM",
+        "FullName" : "Deathmatch"
+      },
+      "links": [
+        {
+          "provider": "Mega.nz",
+          "url": "https://mega.nz/file/N7kVQIQa#BqCFGSLdDzAziUkc3PvRIAybfwCEemKsyiK8tgh0D3E"
+        }
+      ],
+      "images": [
+        "Work_Images/UDK/Derelict/1.jpg",
+        "Work_Images/UDK/Derelict/2.jpg",
+        "Work_Images/UDK/Derelict/3.jpg",
+        "Work_Images/UDK/Derelict/4.jpg",
+        "Work_Images/UDK/Derelict/5.jpg",
+        "Work_Images/UDK/Derelict/6.jpg"
+      ]
+    },
+    {
+      "title": "DM-MidShip",
+      "description": "Port of an older Midship remake for Unreal Tournament.\n\nMidship is a small map, ideal for duels and small free-for-all games. Although not exactly symmetrical, it is considered to be a symmetrical map, due to the fact that the asymmetrical sections are equal distances from each base. Midship prominently features the purple/pink color combination of most Covenant architecture.",
+      "version": "1.0",
+      "filesize": "3.2",
+      "publishedDate": "2012-10-16",
+      "projectThumbnail": "ProjectThumbnails/UDK/DM-MidShip/1.jpg",
+      "minimumPlayer": 4,
+      "maximumPlayer": 8,
+      "environment": "SciFi",
+      "gameType": {
+        "Identifier" : "DM",
+        "FullName" : "Deathmatch"
+      },
+      "links": [
+        {
+          "provider": "Mega.nz",
+          "url": "https://mega.nz/file/M6dnhAIS#frZ95okR6YeTYUHppMmKebWVDwVdG2EScup8nvYMg7w"
+        }
+      ],
+      "images": [
+        "Work_Images/UDK/Midship/1.jpg",
+        "Work_Images/UDK/Midship/2.jpg",
+        "Work_Images/UDK/Midship/3.jpg",
+        "Work_Images/UDK/Midship/4.jpg",
+        "Work_Images/UDK/Midship/5.jpg",
+        "Work_Images/UDK/Midship/6.jpg"
+      ]
+    }
+  ]
+

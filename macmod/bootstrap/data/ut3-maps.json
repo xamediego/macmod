@@ -1,0 +1,163 @@
+[
+  {
+    "title": "CTF-Crossfire",
+    "version": "2.0",
+    "description": "CTF-Crossfire is a tightly designed symmetrical Capture The Flag map set in a chilly, snow-covered environment. The opposing bases are strategically placed on either side of a central bridge, encouraging intense head-on engagements. Ideal for 4v4 competitive play, the map emphasizes balanced team tactics and fast-paced action.",
+    "filesize": "6.12",
+    "publishedDate": "2011-05-03",
+    "projectThumbnail": "ProjectThumbnails/UT3/CTF-Crossfire.jpg",
+    "minimumPlayer": 6,
+    "maximumPlayer": 8,
+    "environment": "SciFi",
+    "gameType": {
+      "Identifier": "CTF",
+      "FullName": "Capture The Flag"
+    },
+    "links": [
+      {
+        "provider": "Mapraider",
+        "url": "https://www.mapraider.com/maps/unreal-tournament-3/capture-the-flag/5578/CTF-CrossFire"
+      }
+    ],
+    "images": [
+      "Work_Images/UT3/CTF-CrossFire/1.jpg",
+      "Work_Images/UT3/CTF-CrossFire/2.jpg",
+      "Work_Images/UT3/CTF-CrossFire/3.jpg"
+    ]
+  },
+  {
+    "title": "DM-CTF-Element",
+    "description": "DM-CTF-Element is a detailed remake of the competitive Halo: Reach map 'MLG Element'. Set within a massive octagonal structure nestled in the mountains, the arena features both indoor and outdoor combat zones. A central pagoda-style courtyard divides the map and creates dynamic sightlines and choke points. Gameplay has been preserved while adapting it to the UT3 engine, with DM and CTF modes included.",
+    "version": "3.0",
+    "filesize": "19.31",
+    "publishedDate": "2011-11-20",
+    "projectThumbnail": "ProjectThumbnails/UT3/DM-CTF-Element.jpg",
+    "minimumPlayer": 4,
+    "maximumPlayer": 12,
+    "environment": "Fantasy",
+    "gameType": {
+      "Identifier": "DM",
+      "FullName": "Deathmatch"
+    },
+    "links": [
+      {
+        "provider": "Mapraider",
+        "url": "https://www.mapraider.com/maps/unreal-tournament-3/capture-the-flag/5731/DM-CTF-Element"
+      }
+    ],
+    "images": [
+      "Work_Images/UT3/DM-CTF-Element/1.jpg",
+      "Work_Images/UT3/DM-CTF-Element/2.jpg",
+      "Work_Images/UT3/DM-CTF-Element/3.jpg"
+    ]
+  },
+  {
+    "title": "DM-Esoteric",
+    "description": "DM-Esoteric is a visually striking symmetrical Deathmatch map inspired by Halo’s design language. Set inside a mysterious space cave, the map blends organic cave formations with futuristic architecture to create an eerie, alien battleground. Its layout is optimized for mid- to large-scale skirmishes, offering verticality, cover options, and flowing combat routes.",
+    "version": "1.0",
+    "filesize": "38.84",
+    "publishedDate": "2012-11-18",
+    "projectThumbnail": "ProjectThumbnails/UT3/DM-Esoteric.jpg",
+    "minimumPlayer": 6,
+    "maximumPlayer": 14,
+    "environment": "SciFi",
+    "gameType": {
+      "Identifier" : "DM",
+      "FullName" : "Deathmatch"
+    },
+    "links": [
+      {
+        "provider": "Mapraider",
+        "url": "https://www.mapraider.com/maps/unreal-tournament-3/deathmatch/5905/DM-Esoteric"
+      }
+    ],
+    "images": [
+      "Work_Images/UT3/DM-Esoteric/1.jpg",
+      "Work_Images/UT3/DM-Esoteric/2.jpg",
+      "Work_Images/UT3/DM-Esoteric/3.jpg"
+    ]
+  },
+  {
+    "title": "VCTF-District",
+    "description": "VCTF-District drops players into an urban battlefield where intense vehicle and infantry combat collide. Navigate the streets and buildings on foot or unleash destruction in open areas using powerful vehicles like the Hellbender. The layout supports multiple playstyles, from close-quarters building skirmishes to large-scale vehicular confrontations.",
+    "version": "3.0",
+    "filesize": "10.78",
+    "publishedDate": "2011-01-09",
+    "projectThumbnail": "ProjectThumbnails/UT3/VCTF-District.jpg",
+    "minimumPlayer": 12,
+    "maximumPlayer": 20,
+    "environment": "Realism",
+    "gameType": {
+      "Identifier" : "VCTF",
+      "FullName" : "Vehicular CTF"
+    },
+    "links": [
+      {
+        "provider": "Mapraider",
+        "url": "https://www.mapraider.com/maps/unreal-tournament-3/vehicular-ctf/5708/VCTF-District"
+      }
+    ],
+    "images": [
+      "Work_Images/UT3/VCTF-District/1.jpg",
+      "Work_Images/UT3/VCTF-District/2.jpg",
+      "Work_Images/UT3/VCTF-District/3.jpg"
+    ]
+  },
+  {
+    "title": "VCTF-Retribution",
+    "description": "VCTF-Retribution takes place in a transformed sector of the iconic Necris city, now repurposed for massive vehicular warfare. The map offers a symmetrical layout optimized for large team battles, with a balanced blend of urban structures and open driving lanes. Gone are the eerie Necris elements—replaced by a daylight setting and a sleek corporate warzone aesthetic.",
+    "version": "3.0",
+    "filesize": "9.85",
+    "publishedDate": "2012-11-11",
+    "projectThumbnail": "ProjectThumbnails/UT3/VCTF-Retribution.jpg",
+    "minimumPlayer": 14,
+    "maximumPlayer": 32,
+    "environment": "Fantasy",
+    "gameType": {
+      "Identifier" : "VCTF",
+      "FullName" : "Vehicular CTF"
+    },
+    "links": [
+      {
+        "provider": "Mapraider",
+        "url": "https://www.mapraider.com/maps/unreal-tournament-3/vehicular-ctf/5848/VCTF-Retribution"
+      }
+    ],
+    "images": [
+      "Work_Images/UT3/VCTF-Retribution/1.jpg",
+      "Work_Images/UT3/VCTF-Retribution/2.jpg",
+      "Work_Images/UT3/VCTF-Retribution/3.jpg",
+      "Work_Images/UT3/VCTF-Retribution/4.jpg",
+      "Work_Images/UT3/VCTF-Retribution/5.jpg"
+    ]
+  },
+  {
+    "title": "WAR-Snowbound",
+    "description": "War-Snowbound is an expansive Warfare map set in a remote, icy canyon once inhabited by an ancient civilization. The symmetrical layout supports large-scale strategic gameplay with objectives spread across frozen terrain and massive structures. Players must coordinate vehicle usage, team roles, and base control to secure victory in this visually immersive frozen battlefield.",
+    "version": "3.0",
+    "filesize": "53.98",
+    "publishedDate": "2011-08-24",
+    "projectThumbnail": "ProjectThumbnails/UT3/War-Snowbound.jpg",
+    "minimumPlayer": 24,
+    "maximumPlayer": 36,
+    "environment": "Glacier",
+    "gameType": {
+      "Identifier" : "WAR",
+      "FullName" : "Unreal Warfare"
+    },
+    "links": [
+      {
+        "provider": "Mapraider",
+        "url": "https://www.mapraider.com/maps/unreal-tournament-3/unreal-warfare/5720/War-SnowBound"
+      }
+    ],
+    "images": [
+      "Work_Images/UT3/War-Snowbound/1.jpg",
+      "Work_Images/UT3/War-Snowbound/2.jpg",
+      "Work_Images/UT3/War-Snowbound/3.jpg",
+      "Work_Images/UT3/War-Snowbound/4.jpg",
+      "Work_Images/UT3/War-Snowbound/5.jpg",
+      "Work_Images/UT3/War-Snowbound/6.jpg"
+    ]
+  }
+]
