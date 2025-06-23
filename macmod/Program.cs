@@ -62,7 +62,7 @@ public class MacApi
                 });
         });
 
-        if (builder.Environment.IsDevelopment())
+        if (!builder.Environment.IsDevelopment())
         {
             builder.Services.AddSwaggerGen(c =>
             {
@@ -101,6 +101,9 @@ public class MacApi
             app.UseSwagger();
             app.UseSwaggerUI(c => { c.SwaggerEndpoint("/swagger/v1/swagger.json", "NetAuth API V1"); });
         }
+        
+        app.UseSwagger();
+        app.UseSwaggerUI(c => { c.SwaggerEndpoint("/swagger/v1/swagger.json", "NetAuth API V1"); });
         
         app.UseCors(allowedOrigins);
 
