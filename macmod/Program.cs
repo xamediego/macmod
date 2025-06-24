@@ -1,4 +1,3 @@
-using macmod.bootstrap;
 using macmod.database;
 using macmod.services.implementation;
 using macmod.services.interfaces;
@@ -22,10 +21,10 @@ public class MacApi
         
         builder.Services.AddScoped<IProjectService, ProjectService>();
         builder.Services.AddScoped<IProjectTypeService, ProjectTypeService>();
-        builder.Services.AddScoped<IBlobService, BlobService>();
         builder.Services.AddScoped<IGameMapService, GameMapService>();
         builder.Services.AddScoped<IProgrammingProjectService, ProgrammingProjectService>();
         
+        builder.Services.AddScoped<IBlobService, BlobService>();
         Console.WriteLine("Services Configured");
         
         builder.Services.ConfigureApplicationCookie(o =>
@@ -50,6 +49,7 @@ public class MacApi
         
         // Configure cors
         const string allowedOrigins = "ALLOWED_CORS";
+        
         var frontEndCors = builder.Configuration["FrontEndBaseURL"] ?? "http://localhost:4200";
         Console.WriteLine($"Allowed cors: {allowedOrigins}");
         builder.Services.AddCors(options =>
@@ -100,6 +100,7 @@ public class MacApi
         {
             using var serviceScope = app.Services.GetRequiredService<IServiceScopeFactory>().CreateScope();
             var dbContext = serviceScope.ServiceProvider.GetRequiredService<DatabaseContext>();
+            
             if (await dbContext.Database.CanConnectAsync())
             {
                 Console.WriteLine("Can connect to external database");
@@ -114,12 +115,13 @@ public class MacApi
         {
             using var serviceScope = app.Services.GetRequiredService<IServiceScopeFactory>().CreateScope();
             // await DataSeeder.SeedDatabase(serviceScope);
-            
-            app.UseSwagger();
-            app.UseSwaggerUI(c => { c.SwaggerEndpoint("/swagger/v1/swagger.json", "NetAuth API V1"); });
         }
         
+        app.UseSwagger();
+        app.UseSwaggerUI(c => { c.SwaggerEndpoint("/swagger/v1/swagger.json", "NetAuth API V1"); });
+        
         app.UseCors(allowedOrigins);
+        app.UseAuthorization();
         app.MapControllers();
         Console.WriteLine("Application initialized");
 
