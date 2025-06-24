@@ -65,13 +65,21 @@ namespace macmod.Migrations
 
                     b.Property<string>("FullName")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(250)
+                        .HasColumnType("nvarchar(250)");
 
                     b.Property<string>("Identifier")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("FullName")
+                        .IsUnique();
+
+                    b.HasIndex("Identifier")
+                        .IsUnique();
 
                     b.ToTable("GameTypes");
                 });
@@ -111,13 +119,13 @@ namespace macmod.Migrations
 
                     b.Property<string>("Provider")
                         .IsRequired()
-                        .HasMaxLength(50)
-                        .HasColumnType("nvarchar(50)");
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
 
                     b.Property<string>("Url")
                         .IsRequired()
-                        .HasMaxLength(100)
-                        .HasColumnType("nvarchar(100)");
+                        .HasMaxLength(250)
+                        .HasColumnType("nvarchar(250)");
 
                     b.HasKey("Id");
 
@@ -165,8 +173,8 @@ namespace macmod.Migrations
 
                     b.Property<string>("Filesize")
                         .IsRequired()
-                        .HasMaxLength(250)
-                        .HasColumnType("nvarchar(250)");
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
 
                     b.Property<string>("ProjectThumbnail")
                         .IsRequired()
@@ -186,12 +194,15 @@ namespace macmod.Migrations
 
                     b.Property<string>("Version")
                         .IsRequired()
-                        .HasMaxLength(250)
-                        .HasColumnType("nvarchar(250)");
+                        .HasMaxLength(150)
+                        .HasColumnType("nvarchar(150)");
 
                     b.HasKey("Id");
 
                     b.HasIndex("ProjectTypeId");
+
+                    b.HasIndex("Title")
+                        .IsUnique();
 
                     b.ToTable("Projects");
                 });
@@ -221,10 +232,16 @@ namespace macmod.Migrations
 
                     b.Property<string>("Type")
                         .IsRequired()
-                        .HasMaxLength(250)
-                        .HasColumnType("nvarchar(250)");
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("Title")
+                        .IsUnique();
+
+                    b.HasIndex("Type")
+                        .IsUnique();
 
                     b.ToTable("ProjectTypes");
                 });

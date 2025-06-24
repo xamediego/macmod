@@ -1,8 +1,11 @@
+using macmod.bootstrap;
 using macmod.database;
 using macmod.services.implementation;
 using macmod.services.interfaces;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.OpenApi.Models;
+
+namespace macmod;
 
 public class MacApi
 {
@@ -64,7 +67,7 @@ public class MacApi
                 });
         });
 
-        if (!builder.Environment.IsDevelopment())
+        if (builder.Environment.IsDevelopment())
         {
             builder.Services.AddSwaggerGen(c =>
             {
@@ -114,11 +117,11 @@ public class MacApi
         if (app.Environment.IsDevelopment())
         {
             using var serviceScope = app.Services.GetRequiredService<IServiceScopeFactory>().CreateScope();
-            // await DataSeeder.SeedDatabase(serviceScope);
+            await DataSeeder.SeedDatabase(serviceScope);
+            
+            app.UseSwagger();
+            app.UseSwaggerUI(c => { c.SwaggerEndpoint("/swagger/v1/swagger.json", "NetAuth API V1"); });
         }
-        
-        app.UseSwagger();
-        app.UseSwaggerUI(c => { c.SwaggerEndpoint("/swagger/v1/swagger.json", "NetAuth API V1"); });
         
         app.UseCors(allowedOrigins);
         app.UseAuthorization();

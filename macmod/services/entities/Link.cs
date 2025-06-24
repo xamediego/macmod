@@ -5,12 +5,13 @@ namespace macmod.services.entities;
 
 public class Link
 {
+    [Key]
     public long Id { get; set;}
     
-    [MaxLength(50)] 
+    [MaxLength(100, ErrorMessage = "Provider name cannot exceed 100 characters.")]
     public string Provider { get; set; } = "";
     
-    [MaxLength(100)] 
+    [MaxLength(250, ErrorMessage = "URL cannot exceed 250 characters.")]
     public string Url { get; set; } = "";
     
     [JsonIgnore]

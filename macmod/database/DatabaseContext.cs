@@ -9,6 +9,7 @@ public class DatabaseContext(DbContextOptions<DatabaseContext> options) : DbCont
     {
         base.OnModelCreating(builder);
 
+        // Entity Relations
         builder.Entity<ProjectType>()
             .HasMany(pt => pt.Projects)
             .WithOne(p => p.ProjectType)
@@ -36,17 +37,36 @@ public class DatabaseContext(DbContextOptions<DatabaseContext> options) : DbCont
             .WithOne(gameMap => gameMap.GameType)
             .HasForeignKey(gameMap => gameMap.GameTypeId)
             .OnDelete(DeleteBehavior.Cascade);
+        
+        // Entity Unique Constraints
+        builder.Entity<ProjectType>()
+            .HasIndex(pt => pt.Type)
+            .IsUnique();
+        builder.Entity<ProjectType>()
+            .HasIndex(pt => pt.Title)
+            .IsUnique();
+        
+        builder.Entity<Project>()
+            .HasIndex(pt => pt.Title)
+            .IsUnique();
+
+        builder.Entity<GameType>()
+            .HasIndex(pt => pt.Identifier)
+            .IsUnique();
+        builder.Entity<GameType>()
+            .HasIndex(pt => pt.FullName)
+            .IsUnique();
     }
 
-    public DbSet<ProjectType> ProjectTypes { get; set; } = default!;
+    public DbSet<ProjectType> ProjectTypes { get; set; } = null!;
 
-    public DbSet<Project> Projects { get; set; } = default!;
+    public DbSet<Project> Projects { get; set; } = null!;
 
-    public DbSet<GameMap> GameMaps { get; set; } = default!;
+    public DbSet<GameMap> GameMaps { get; set; } = null!;
 
-    public DbSet<GameType> GameTypes { get; set; } = default!;
+    public DbSet<GameType> GameTypes { get; set; } = null!;
 
-    public DbSet<ProgrammingProject> ProgrammingProject { get; set; } = default!;
+    public DbSet<ProgrammingProject> ProgrammingProject { get; set; } = null!;
 
-    public DbSet<Image> Images { get; set; } = default!;
+    public DbSet<Image> Images { get; set; } = null!;
 }

@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace macmod.Migrations
 {
     /// <inheritdoc />
-    public partial class init : Migration
+    public partial class constraits : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -17,8 +17,8 @@ namespace macmod.Migrations
                 {
                     Id = table.Column<long>(type: "bigint", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    Identifier = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    FullName = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                    Identifier = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
+                    FullName = table.Column<string>(type: "nvarchar(250)", maxLength: 250, nullable: false)
                 },
                 constraints: table =>
                 {
@@ -31,7 +31,7 @@ namespace macmod.Migrations
                 {
                     Id = table.Column<long>(type: "bigint", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    Type = table.Column<string>(type: "nvarchar(250)", maxLength: 250, nullable: false),
+                    Type = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: false),
                     Title = table.Column<string>(type: "nvarchar(250)", maxLength: 250, nullable: false),
                     Thumbnail = table.Column<string>(type: "nvarchar(250)", maxLength: 250, nullable: false),
                     Icon = table.Column<string>(type: "nvarchar(250)", maxLength: 250, nullable: false)
@@ -49,8 +49,8 @@ namespace macmod.Migrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Title = table.Column<string>(type: "nvarchar(250)", maxLength: 250, nullable: false),
                     Description = table.Column<string>(type: "nvarchar(1000)", maxLength: 1000, nullable: false),
-                    Version = table.Column<string>(type: "nvarchar(250)", maxLength: 250, nullable: false),
-                    Filesize = table.Column<string>(type: "nvarchar(250)", maxLength: 250, nullable: false),
+                    Version = table.Column<string>(type: "nvarchar(150)", maxLength: 150, nullable: false),
+                    Filesize = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: false),
                     ProjectThumbnail = table.Column<string>(type: "nvarchar(250)", maxLength: 250, nullable: false),
                     PublishedDate = table.Column<DateTime>(type: "datetime2", nullable: false),
                     ProjectTypeId = table.Column<long>(type: "bigint", nullable: false)
@@ -121,8 +121,8 @@ namespace macmod.Migrations
                 {
                     Id = table.Column<long>(type: "bigint", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    Provider = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
-                    Url = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: false),
+                    Provider = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: false),
+                    Url = table.Column<string>(type: "nvarchar(250)", maxLength: 250, nullable: false),
                     ProjectId = table.Column<long>(type: "bigint", nullable: false)
                 },
                 constraints: table =>
@@ -168,6 +168,18 @@ namespace macmod.Migrations
                 unique: true);
 
             migrationBuilder.CreateIndex(
+                name: "IX_GameTypes_FullName",
+                table: "GameTypes",
+                column: "FullName",
+                unique: true);
+
+            migrationBuilder.CreateIndex(
+                name: "IX_GameTypes_Identifier",
+                table: "GameTypes",
+                column: "Identifier",
+                unique: true);
+
+            migrationBuilder.CreateIndex(
                 name: "IX_Images_ProjectId",
                 table: "Images",
                 column: "ProjectId");
@@ -187,6 +199,24 @@ namespace macmod.Migrations
                 name: "IX_Projects_ProjectTypeId",
                 table: "Projects",
                 column: "ProjectTypeId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Projects_Title",
+                table: "Projects",
+                column: "Title",
+                unique: true);
+
+            migrationBuilder.CreateIndex(
+                name: "IX_ProjectTypes_Title",
+                table: "ProjectTypes",
+                column: "Title",
+                unique: true);
+
+            migrationBuilder.CreateIndex(
+                name: "IX_ProjectTypes_Type",
+                table: "ProjectTypes",
+                column: "Type",
+                unique: true);
         }
 
         /// <inheritdoc />

@@ -1,7 +1,12 @@
+using System.ComponentModel.DataAnnotations;
+
 namespace macmod.controllers.dto;
 
 public class LinkDto
 {
-    public string Provider { get; set; }
-    public string Url { get; set; }
+    [MaxLength(100, ErrorMessage = "Provider name cannot exceed 100 characters.")]
+    public string Provider { get; set; } = "";
+
+    [MaxLength(250, ErrorMessage = "URL cannot exceed 250 characters.")]
+    public string Url { get; set; } = "";
 }

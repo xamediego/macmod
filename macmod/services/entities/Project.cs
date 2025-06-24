@@ -5,24 +5,25 @@ namespace macmod.services.entities;
 
 public class Project
 {
+    [Key]
     public long Id { get; set; }
     
-    [MaxLength(250)] 
+    [MaxLength(250, ErrorMessage = "Title cannot exceed 250 characters.")]
     public string Title { get; set; } = "";
     
-    [MaxLength(1000)] 
+    [MaxLength(1000, ErrorMessage = "Description cannot exceed 250 characters.")]
     public string Description { get; set; } = "";
     
-    [MaxLength(250)] 
+    [MaxLength(150, ErrorMessage = "Version cannot exceed 150 characters.")]
     public string Version { get; set; } = "";
     
-    [MaxLength(250)] 
+    [MaxLength(100, ErrorMessage = "Filesize cannot exceed 100 characters.")]
     public string Filesize { get; set; } = "";
     
-    [MaxLength(250)] 
+    [MaxLength(250, ErrorMessage = "Project thumbnail path cannot exceed 250 characters.")]
     public string ProjectThumbnail { get; set; } = "";
-    
-    public DateTime PublishedDate { get; set; }
+
+    [Required] public DateTime PublishedDate { get; set; } = new();
     
     [JsonIgnore]
     public long ProjectTypeId { get; set;}

@@ -1,10 +1,11 @@
 ﻿using System.Text.Json;
+
+using Microsoft.EntityFrameworkCore;
+
 using macmod.controllers.dto;
 using macmod.database;
 using macmod.services.entities;
-using macmod.services.Enums;
 using macmod.services.mappers;
-using Microsoft.EntityFrameworkCore;
 
 namespace macmod.bootstrap;
 
@@ -46,7 +47,7 @@ public abstract class DataSeeder
             Icon = "TypeIcons/ut3_icon.png"
         };
 
-        var ut2k4 = new ProjectType
+        var ut2K4 = new ProjectType
         {
             Type = "UT2k4",
             Title = "Unreal Tournament 2004",
@@ -54,7 +55,7 @@ public abstract class DataSeeder
             Icon = "TypeIcons/ut2k4_icon.png"
         };
         
-        await dbContext.ProjectTypes.AddRangeAsync(java, udk, ut3, ut2k4);
+        await dbContext.ProjectTypes.AddRangeAsync(java, udk, ut3, ut2K4);
         await dbContext.SaveChangesAsync();
     }
     
@@ -72,7 +73,7 @@ public abstract class DataSeeder
             new() { Identifier = "AS", FullName = "Assault" },
 
             // UT3
-            new() { Identifier = "vCTF", FullName = "Vehicle CTF" },
+            new() { Identifier = "VCTF", FullName = "Vehicle CTF" },
             new() { Identifier = "WAR", FullName = "Warfare" },
             new() { Identifier = "Duel", FullName = "Duel" }
         };
@@ -118,9 +119,13 @@ public abstract class DataSeeder
         var mapDtos = JsonSerializer.Deserialize<List<GameMapDto>>(mapsJson, jsonOptions);
         var gameMaps = new List<GameMap>();
 
+        var gameTypes = await dbContext.GameTypes.ToListAsync();
+        
         foreach (var dto in mapDtos)
         {
-            var gameType = await dbContext.GameTypes.FirstOrDefaultAsync(g => g.FullName == dto.GameType.FullName);
+            Console.WriteLine("Map: " + dto.Title);
+            
+            var gameType = await dbContext.GameTypes.FirstOrDefaultAsync(gt => gt.Identifier == dto.GameType.Identifier);
             if (gameType == null) continue;
 
             var project = ProjectMapper.MapProjectFromDto(dto, projectType);
@@ -135,10 +140,16 @@ public abstract class DataSeeder
             gameMaps.Add(map);
         }
 
+        Console.WriteLine($"To: {gameMaps.Count}");
         await dbContext.GameMaps.AddRangeAsync(gameMaps);
         await dbContext.SaveChangesAsync();
 
-        var mapResult = await dbContext.GameMaps.ToListAsync();
+        var mapResult = await dbContext.GameMaps.Include(g => g.Project).ThenInclude(p => p.ProjectType).Where(p => p.Project.ProjectType.Type == "UT3").ToListAsync();
+        
         Console.WriteLine($"Size: {mapResult.Count}");
+        foreach (var gameMap in mapResult)
+        {
+            Console.WriteLine("map: " + gameMap.Project.Title);
+        }
     }
 }
