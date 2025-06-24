@@ -49,7 +49,8 @@ public class MacApi
         
         // Configure cors
         const string allowedOrigins = "ALLOWED_CORS";
-        string frontEndCors = builder.Configuration["FrontEndBaseURL"] ?? "http://localhost:4200";
+        var frontEndCors = builder.Configuration["FrontEndBaseURL"] ?? "http://localhost:4200";
+        Console.WriteLine($"Allowed cors: {allowedOrigins}");
         builder.Services.AddCors(options =>
         {
             options.AddPolicy(allowedOrigins,
@@ -84,7 +85,7 @@ public class MacApi
                                 Id = "Bearer"
                             }
                         },
-                        new string[] { }
+                        []
                     }
                 });
             });
@@ -96,17 +97,14 @@ public class MacApi
         if (app.Environment.IsDevelopment())
         {
             using var serviceScope = app.Services.GetRequiredService<IServiceScopeFactory>().CreateScope();
-            // await DataSeeder.SeedDatabase(serviceScope);
+            await DataSeeder.SeedDatabase(serviceScope);
+            
+            app.UseSwagger();
+            app.UseSwaggerUI(c => { c.SwaggerEndpoint("/swagger/v1/swagger.json", "NetAuth API V1"); });
         }
         
-        app.UseSwagger();
-        app.UseSwaggerUI(c => { c.SwaggerEndpoint("/swagger/v1/swagger.json", "NetAuth API V1"); });
-        
         app.UseCors(allowedOrigins);
-
-        app.UseAuthorization();
         app.MapControllers();
-
         Console.WriteLine("Application initialized");
 
         return app;
