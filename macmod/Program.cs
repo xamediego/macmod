@@ -37,6 +37,7 @@ public class MacApi
         Console.WriteLine("Configure Database");
         builder.Configuration["DATABASE_URL"] = Environment.GetEnvironmentVariable("DATABASE_URL") ?? builder.Configuration["DATABASE_URL"];
         var dbConnection = builder.Configuration["DATABASE_URL"] ?? "";
+        Console.WriteLine(dbConnection);
         if (builder.Environment.IsDevelopment())
         {
             builder.Services.AddDbContext<DatabaseContext>(options => options.UseSqlite("Data Source=database.db"));
@@ -112,7 +113,7 @@ public class MacApi
         if (app.Environment.IsDevelopment())
         {
             using var serviceScope = app.Services.GetRequiredService<IServiceScopeFactory>().CreateScope();
-            await DataSeeder.SeedDatabase(serviceScope);
+            // await DataSeeder.SeedDatabase(serviceScope);
             
             app.UseSwagger();
             app.UseSwaggerUI(c => { c.SwaggerEndpoint("/swagger/v1/swagger.json", "NetAuth API V1"); });
