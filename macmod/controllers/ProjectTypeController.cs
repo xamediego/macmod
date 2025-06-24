@@ -26,4 +26,12 @@ public class ProjectTypeController(IProjectTypeService projectTypeService) : Con
 
         return result != null ? Ok(result) : NotFound();
     }
+    
+    [HttpGet("type/complete/{type}")]
+    public async Task<ActionResult<ProjectTypeDto>> FindByTypeComplete(string type)
+    {
+        var result = await projectTypeService.FindByTypeCompleteAsync(type);
+
+        return result != null ? Ok(result) : NotFound();
+    }
 }

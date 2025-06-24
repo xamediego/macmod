@@ -23,11 +23,24 @@ public class ProjectTypeService(DatabaseContext database) : IProjectTypeService
     public async Task<ProjectTypeDto[]> FindAllCompleteAsync()
     {
         return await database.ProjectTypes
-            .Include(type => type.Projects)
+            .Include(pt => pt.Projects)
             .ThenInclude(project => project.Images)
-            .Include(type => type.Projects)
+            .Include(pt => pt.Projects)
             .ThenInclude(project => project.Links)
             .Select(pt => ProjectTypeMapper.MapDtoFromProjectType(pt))
             .ToArrayAsync();
+    }
+
+    public async Task<ProjectTypeDto?> FindByTypeCompleteAsync(string type)
+    {
+        var projectType = await database.ProjectTypes
+            .Where(pt => pt.Type == type)
+            .Include(pt => pt.Projects)
+            .ThenInclude(project => project.Images)
+            .Include(pt => pt.Projects)
+            .ThenInclude(project => project.Links)
+            .FirstOrDefaultAsync();
+        
+        return projectType != null ? ProjectTypeMapper.MapDtoFromProjectType(projectType) : null;
     }
 }
