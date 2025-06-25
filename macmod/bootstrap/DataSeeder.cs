@@ -15,6 +15,8 @@ public abstract class DataSeeder
     {
         Console.WriteLine("Seeding Database.......");
         var dbContext = serviceScope.ServiceProvider.GetRequiredService<DatabaseContext>();
+
+        await dbContext.ClearAllAsync();
         
         await GenerateProjectTypes(dbContext);
         await GenerateGameTypes(dbContext);

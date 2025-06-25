@@ -69,4 +69,18 @@ public class DatabaseContext(DbContextOptions<DatabaseContext> options) : DbCont
     public DbSet<ProgrammingProject> ProgrammingProject { get; set; } = null!;
 
     public DbSet<Image> Images { get; set; } = null!;
+    
+    public async Task ClearAllAsync()
+    {
+        // Delete children first due to foreign key dependencies
+        Images.RemoveRange(Images);
+        ProgrammingProject.RemoveRange(ProgrammingProject);
+        GameMaps.RemoveRange(GameMaps);
+        Projects.RemoveRange(Projects);
+        ProjectTypes.RemoveRange(ProjectTypes);
+        GameTypes.RemoveRange(GameTypes);
+
+        await SaveChangesAsync();
+    }
+
 }
