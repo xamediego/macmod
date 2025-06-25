@@ -118,10 +118,10 @@ public class MacApi
         {
             using var serviceScope = app.Services.GetRequiredService<IServiceScopeFactory>().CreateScope();
             await DataSeeder.SeedDatabase(serviceScope);
+            
+            app.UseSwagger();
+            app.UseSwaggerUI(c => { c.SwaggerEndpoint("/swagger/v1/swagger.json", "NetAuth API V1"); });
         }
-        
-        app.UseSwagger();
-        app.UseSwaggerUI(c => { c.SwaggerEndpoint("/swagger/v1/swagger.json", "NetAuth API V1"); });
         
         app.UseCors(allowedOrigins);
         app.UseAuthorization();
