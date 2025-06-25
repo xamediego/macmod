@@ -5,7 +5,7 @@
       "version": "2.0",
       "filesize": "130.8",
       "publishedDate": "2012-11-15",
-      "projectThumbnail": "ProjectThumbnails/UDK/DM-Derelict/1.jpg",
+      "projectThumbnail": "https://images.maxjonge.com/images/projects/udk/DM-Derelict/thumbnail.jpg",
       "minimumPlayer": 4,
       "maximumPlayer": 8,
       "environment": "SciFi",
@@ -20,12 +20,12 @@
         }
       ],
       "images": [
-        "Work_Images/UDK/Derelict/1.jpg",
-        "Work_Images/UDK/Derelict/2.jpg",
-        "Work_Images/UDK/Derelict/3.jpg",
-        "Work_Images/UDK/Derelict/4.jpg",
-        "Work_Images/UDK/Derelict/5.jpg",
-        "Work_Images/UDK/Derelict/6.jpg"
+        "https://images.maxjonge.com/images/projects/udk/DM-Derelict/1.jpg",
+        "https://images.maxjonge.com/images/projects/udk/DM-Derelict/2.jpg",
+        "https://images.maxjonge.com/images/projects/udk/DM-Derelict/3.jpg",
+        "https://images.maxjonge.com/images/projects/udk/DM-Derelict/4.jpg",
+        "https://images.maxjonge.com/images/projects/udk/DM-Derelict/5.jpg",
+        "https://images.maxjonge.com/images/projects/udk/DM-Derelict/6.jpg"
       ]
     },
     {
@@ -34,7 +34,7 @@
       "version": "1.0",
       "filesize": "3.2",
       "publishedDate": "2012-10-16",
-      "projectThumbnail": "ProjectThumbnails/UDK/DM-MidShip/1.jpg",
+      "projectThumbnail": "https://images.maxjonge.com/images/projects/udk/Midship/thumbnail.jpg",
       "minimumPlayer": 4,
       "maximumPlayer": 8,
       "environment": "SciFi",
@@ -49,12 +49,12 @@
         }
       ],
       "images": [
-        "Work_Images/UDK/Midship/1.jpg",
-        "Work_Images/UDK/Midship/2.jpg",
-        "Work_Images/UDK/Midship/3.jpg",
-        "Work_Images/UDK/Midship/4.jpg",
-        "Work_Images/UDK/Midship/5.jpg",
-        "Work_Images/UDK/Midship/6.jpg"
+        "https://images.maxjonge.com/images/projects/udk/DM-MidShip/1.jpg",
+        "https://images.maxjonge.com/images/projects/udk/DM-MidShip/2.jpg",
+        "https://images.maxjonge.com/images/projects/udk/DM-MidShip/3.jpg",
+        "https://images.maxjonge.com/images/projects/udk/DM-MidShip/4.jpg",
+        "https://images.maxjonge.com/images/projects/udk/DM-MidShip/5.jpg",
+        "https://images.maxjonge.com/images/projects/udk/DM-MidShip/6.jpg"
       ]
     }
   ]

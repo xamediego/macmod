@@ -27,32 +27,32 @@ public abstract class DataSeeder
         {
             Type = "Java",
             Title = "Java",
-            Thumbnail = "TypeTumbnails/java_logo.png",
-            Icon = "TypeIcons/java_icon.png"
+            Thumbnail = "https://images.maxjonge.com/images/project-type/java/logo.png",
+            Icon = "https://images.maxjonge.com/images/project-type/java/icon.png"
         };
 
         var udk = new ProjectType
         {
             Type = "UDK",
             Title = "Unreal Development Kit (UDK)",
-            Thumbnail = "TypeTumbnails/udk_logo.png",
-            Icon = "TypeIcons/udk_icon.png"
+            Thumbnail = "https://images.maxjonge.com/images/project-type/udk/logo.png",
+            Icon = "https://images.maxjonge.com/images/project-type/udk/icon.png"
         };
 
         var ut3 = new ProjectType
         {
             Type = "UT3",
             Title = "Unreal Tournament 3",
-            Thumbnail = "TypeTumbnails/ut3_logo.png",
-            Icon = "TypeIcons/ut3_icon.png"
+            Thumbnail = "https://images.maxjonge.com/images/project-type/ut3/logo.png",
+            Icon = "https://images.maxjonge.com/images/project-type/ut3/icon.png"
         };
 
         var ut2K4 = new ProjectType
         {
             Type = "UT2k4",
             Title = "Unreal Tournament 2004",
-            Thumbnail = "TypeTumbnails/ut2k4_logo.png",
-            Icon = "TypeIcons/ut2k4_icon.png"
+            Thumbnail = "https://images.maxjonge.com/images/project-type/ut2k4/logo.png",
+            Icon = "https://images.maxjonge.com/images/project-type/ut2k4/icon.png"
         };
         
         await dbContext.ProjectTypes.AddRangeAsync(java, udk, ut3, ut2K4);

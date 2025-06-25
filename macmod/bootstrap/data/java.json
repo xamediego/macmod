@@ -5,7 +5,7 @@
     "version": "1.0",
     "filesize": "1.2",
     "publishedDate": "2022-05-03",
-    "projectThumbnail": "ProjectThumbnails/Java/JFX-ImageCutter.jpg",
+    "projectThumbnail": "https://images.maxjonge.com/images/projects/java/JFX-ImageCutter/thumbnail.jpg",
     "Purpose": "ImageCropping",
     "links": [
       {
@@ -14,9 +14,9 @@
       }
     ],
     "images": [
-      "Work_Images/JAVA/JFX/1.jpg",
-      "Work_Images/JAVA/JFX/2.jpg",
-      "Work_Images/JAVA/JFX/3.jpg"
+      "https://images.maxjonge.com/images/projects/java/JFX-ImageCutter/1.jpg",
+      "https://images.maxjonge.com/images/projects/java/JFX-ImageCutter/2.jpg",
+      "https://images.maxjonge.com/images/projects/java/JFX-ImageCutter/3.jpg"
     ]
   },
   {
@@ -25,7 +25,7 @@
     "version": "1.0",
     "filesize": "2.8",
     "publishedDate": "2023-02-24",
-    "projectThumbnail": "ProjectThumbnails/Java/JFX-Game.jpg",
+    "projectThumbnail": "https://images.maxjonge.com/images/projects/java/JFX-Game/thumbnail.jpg",
     "Purpose": "Game",
     "links": [
       {
@@ -34,10 +34,10 @@
       }
     ],
     "images": [
-      "Work_Images/JAVA/DEDS/1.jpg",
-      "Work_Images/JAVA/DEDS/2.jpg",
-      "Work_Images/JAVA/DEDS/3.jpg",
-      "Work_Images/JAVA/DEDS/4.jpg"
+      "https://images.maxjonge.com/images/projects/java/JFX-Game/1.jpg",
+      "https://images.maxjonge.com/images/projects/java/JFX-Game/2.jpg",
+      "https://images.maxjonge.com/images/projects/java/JFX-Game/3.jpg",
+      "https://images.maxjonge.com/images/projects/java/JFX-Game/4.jpg"
     ]
   }
 ]

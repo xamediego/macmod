@@ -5,7 +5,7 @@
     "description": "CTF-Crossfire is a tightly designed symmetrical Capture The Flag map set in a chilly, snow-covered environment. The opposing bases are strategically placed on either side of a central bridge, encouraging intense head-on engagements. Ideal for 4v4 competitive play, the map emphasizes balanced team tactics and fast-paced action.",
     "filesize": "6.12",
     "publishedDate": "2011-05-03",
-    "projectThumbnail": "ProjectThumbnails/UT3/CTF-Crossfire.jpg",
+    "projectThumbnail": "https://images.maxjonge.com/images/projects/ut3/CTF-Crossfire/thumbnail.jpg",
     "minimumPlayer": 6,
     "maximumPlayer": 8,
     "environment": "SciFi",
@@ -20,9 +20,9 @@
       }
     ],
     "images": [
-      "Work_Images/UT3/CTF-CrossFire/1.jpg",
-      "Work_Images/UT3/CTF-CrossFire/2.jpg",
-      "Work_Images/UT3/CTF-CrossFire/3.jpg"
+      "https://images.maxjonge.com/images/projects/ut3/CTF-CrossFire/1.jpg",
+      "https://images.maxjonge.com/images/projects/ut3/CTF-CrossFire/2.jpg",
+      "https://images.maxjonge.com/images/projects/ut3/CTF-CrossFire/3.jpg"
     ]
   },
   {
@@ -31,7 +31,7 @@
     "version": "3.0",
     "filesize": "19.31",
     "publishedDate": "2011-11-20",
-    "projectThumbnail": "ProjectThumbnails/UT3/DM-CTF-Element.jpg",
+    "projectThumbnail": "https://images.maxjonge.com/images/projects/ut3/DM-CTF-Element/thumbnail.jpg",
     "minimumPlayer": 4,
     "maximumPlayer": 12,
     "environment": "Fantasy",
@@ -46,9 +46,9 @@
       }
     ],
     "images": [
-      "Work_Images/UT3/DM-CTF-Element/1.jpg",
-      "Work_Images/UT3/DM-CTF-Element/2.jpg",
-      "Work_Images/UT3/DM-CTF-Element/3.jpg"
+      "https://images.maxjonge.com/images/projects/ut3/DM-CTF-Element/1.jpg",
+      "https://images.maxjonge.com/images/projects/ut3/DM-CTF-Element/2.jpg",
+      "https://images.maxjonge.com/images/projects/ut3/DM-CTF-Element/3.jpg"
     ]
   },
   {
@@ -57,7 +57,7 @@
     "version": "1.0",
     "filesize": "38.84",
     "publishedDate": "2012-11-18",
-    "projectThumbnail": "ProjectThumbnails/UT3/DM-Esoteric.jpg",
+    "projectThumbnail": "https://images.maxjonge.com/images/projects/ut3/DM-Esoteric/thumbnail.jpg",
     "minimumPlayer": 6,
     "maximumPlayer": 14,
     "environment": "SciFi",
@@ -72,9 +72,9 @@
       }
     ],
     "images": [
-      "Work_Images/UT3/DM-Esoteric/1.jpg",
-      "Work_Images/UT3/DM-Esoteric/2.jpg",
-      "Work_Images/UT3/DM-Esoteric/3.jpg"
+      "https://images.maxjonge.com/images/projects/ut3/DM-Esoteric/1.jpg",
+      "https://images.maxjonge.com/images/projects/ut3/DM-Esoteric/2.jpg",
+      "https://images.maxjonge.com/images/projects/ut3/DM-Esoteric/3.jpg"
     ]
   },
   {
@@ -83,7 +83,7 @@
     "version": "3.0",
     "filesize": "10.78",
     "publishedDate": "2011-01-09",
-    "projectThumbnail": "ProjectThumbnails/UT3/VCTF-District.jpg",
+    "projectThumbnail": "https://images.maxjonge.com/images/projects/ut3/VCTF-District/thumbnail.jpg",
     "minimumPlayer": 12,
     "maximumPlayer": 20,
     "environment": "Realism",
@@ -98,9 +98,9 @@
       }
     ],
     "images": [
-      "Work_Images/UT3/VCTF-District/1.jpg",
-      "Work_Images/UT3/VCTF-District/2.jpg",
-      "Work_Images/UT3/VCTF-District/3.jpg"
+      "https://images.maxjonge.com/images/projects/ut3/VCTF-District/1.jpg",
+      "https://images.maxjonge.com/images/projects/ut3/VCTF-District/2.jpg",
+      "https://images.maxjonge.com/images/projects/ut3/VCTF-District/3.jpg"
     ]
   },
   {
@@ -109,7 +109,7 @@
     "version": "3.0",
     "filesize": "9.85",
     "publishedDate": "2012-11-11",
-    "projectThumbnail": "ProjectThumbnails/UT3/VCTF-Retribution.jpg",
+    "projectThumbnail": "https://images.maxjonge.com/images/projects/ut3/VCTF-Retribution/thumbnail.jpg",
     "minimumPlayer": 14,
     "maximumPlayer": 32,
     "environment": "Fantasy",
@@ -124,11 +124,11 @@
       }
     ],
     "images": [
-      "Work_Images/UT3/VCTF-Retribution/1.jpg",
-      "Work_Images/UT3/VCTF-Retribution/2.jpg",
-      "Work_Images/UT3/VCTF-Retribution/3.jpg",
-      "Work_Images/UT3/VCTF-Retribution/4.jpg",
-      "Work_Images/UT3/VCTF-Retribution/5.jpg"
+      "https://images.maxjonge.com/images/projects/ut3/VCTF-Retribution/1.jpg",
+      "https://images.maxjonge.com/images/projects/ut3/VCTF-Retribution/2.jpg",
+      "https://images.maxjonge.com/images/projects/ut3/VCTF-Retribution/3.jpg",
+      "https://images.maxjonge.com/images/projects/ut3/VCTF-Retribution/4.jpg",
+      "https://images.maxjonge.com/images/projects/ut3/VCTF-Retribution/5.jpg"
     ]
   },
   {
@@ -137,7 +137,7 @@
     "version": "3.0",
     "filesize": "53.98",
     "publishedDate": "2011-08-24",
-    "projectThumbnail": "ProjectThumbnails/UT3/War-Snowbound.jpg",
+    "projectThumbnail": "https://images.maxjonge.com/images/projects/ut3/War-Snowbound/thumbnail.jpg",
     "minimumPlayer": 24,
     "maximumPlayer": 36,
     "environment": "Glacier",
@@ -152,12 +152,12 @@
       }
     ],
     "images": [
-      "Work_Images/UT3/War-Snowbound/1.jpg",
-      "Work_Images/UT3/War-Snowbound/2.jpg",
-      "Work_Images/UT3/War-Snowbound/3.jpg",
-      "Work_Images/UT3/War-Snowbound/4.jpg",
-      "Work_Images/UT3/War-Snowbound/5.jpg",
-      "Work_Images/UT3/War-Snowbound/6.jpg"
+      "https://images.maxjonge.com/images/projects/ut3/War-Snowbound/1.jpg",
+      "https://images.maxjonge.com/images/projects/ut3/War-Snowbound/2.jpg",
+      "https://images.maxjonge.com/images/projects/ut3/War-Snowbound/3.jpg",
+      "https://images.maxjonge.com/images/projects/ut3/War-Snowbound/4.jpg",
+      "https://images.maxjonge.com/images/projects/ut3/War-Snowbound/5.jpg",
+      "https://images.maxjonge.com/images/projects/ut3/War-Snowbound/6.jpg"
     ]
   }
 ]

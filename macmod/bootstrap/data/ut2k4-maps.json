@@ -5,7 +5,7 @@
     "filesize": "45.5mb",
     "description": "A compact, sci-fi-themed Invasion RPG map enclosed in a box-like arena. Features a hidden control panel that can summon an Ion Tank for players who know the secret code. Ideal for small, high-intensity matches with strategic surprises.",
     "publishedDate": "2010-08-01",
-    "projectThumbnail": "ProjectThumbnails/UT2k4/DM-Dome.jpg",
+    "projectThumbnail": "https://images.maxjonge.com/images/projects/ut2k4/DM-Dome/thumbnail.jpg",
     "minimumPlayer": 4,
     "maximumPlayer": 8,
     "environment": "SciFi",
@@ -24,9 +24,9 @@
       }
     ],
     "images": [
-      "Work_Images/UT2k4/Dome/1.jpg",
-      "Work_Images/UT2k4/Dome/2.jpg",
-      "Work_Images/UT2k4/Dome/3.jpg"
+      "https://images.maxjonge.com/images/projects/ut2k4/DM-Dome/1.jpg",
+      "https://images.maxjonge.com/images/projects/ut2k4/DM-Dome/2.jpg",
+      "https://images.maxjonge.com/images/projects/ut2k4/DM-Dome/3.jpg"
     ]
   },
   {
@@ -35,7 +35,7 @@
     "filesize": "45.5mb",
     "description": "An ultra-compact invasion RPG map with a box-style layout, designed with numerous hiding spots and ambush zones. Perfect for chaotic, close-quarters combat and quick monster waves.",
     "publishedDate": "2010-08-01",
-    "projectThumbnail": "ProjectThumbnails/UT2k4/DM-Hellzone.jpg",
+    "projectThumbnail": "https://images.maxjonge.com/images/projects/ut2k4/DM-Hellzone/thumbnail.jpg",
     "minimumPlayer": 4,
     "maximumPlayer": 8,
     "environment": "SciFi",
@@ -54,9 +54,9 @@
       }
     ],
     "images": [
-      "Work_Images/UT2k4/Hellzone/1.jpg",
-      "Work_Images/UT2k4/Hellzone/2.jpg",
-      "Work_Images/UT2k4/Hellzone/3.jpg"
+      "https://images.maxjonge.com/images/projects/ut2k4/DM-Hellzone/1.jpg",
+      "https://images.maxjonge.com/images/projects/ut2k4/DM-Hellzone/2.jpg",
+      "https://images.maxjonge.com/images/projects/ut2k4/DM-Hellzone/3.jpg"
     ]
   },
   {
@@ -65,7 +65,7 @@
     "filesize": "45.5mb",
     "description": "A medium-sized Invasion RPG map inspired by the aesthetics of the Halo universe. Combines sci-fi corridors with open combat zones, offering a balance of exploration and fast-paced encounters.",
     "publishedDate": "2010-09-23",
-    "projectThumbnail": "ProjectThumbnails/UT2k4/DM-Instaltion-486.jpg",
+    "projectThumbnail": "https://images.maxjonge.com/images/projects/ut2k4/DM-Instaltion-486/thumbnail.jpg",
     "minimumPlayer": 4,
     "maximumPlayer": 10,
     "environment": "SciFi",
@@ -84,9 +84,9 @@
       }
     ],
     "images": [
-      "Work_Images/UT2k4/Instaltion/1.jpg",
-      "Work_Images/UT2k4/Instaltion/2.jpg",
-      "Work_Images/UT2k4/Instaltion/3.jpg"
+      "https://images.maxjonge.com/images/projects/ut2k4/DM-Instaltion-486/1.jpg",
+      "https://images.maxjonge.com/images/projects/ut2k4/DM-Instaltion-486/2.jpg",
+      "https://images.maxjonge.com/images/projects/ut2k4/DM-Instaltion-486/3.jpg"
     ]
   },
   {
@@ -95,7 +95,7 @@
     "filesize": "45.5mb",
     "description": "A dark and atmospheric invasion RPG map with shadowy corridors and moody lighting. Focuses on immersive sci-fi aesthetics and intense monster wave progression, encouraging defensive team play.",
     "publishedDate": "2010-10-03",
-    "projectThumbnail": "ProjectThumbnails/UT2k4/DM-Legacy.jpg",
+    "projectThumbnail": "https://images.maxjonge.com/images/projects/ut2k4/DM-Legacy/thumbnail.jpg",
     "minimumPlayer": 4,
     "maximumPlayer": 8,
     "environment": "SciFi",
@@ -114,9 +114,9 @@
       }
     ],
     "images": [
-      "Work_Images/UT2k4/Legacy/1.jpg",
-      "Work_Images/UT2k4/Legacy/2.jpg",
-      "Work_Images/UT2k4/Legacy/3.jpg"
+      "https://images.maxjonge.com/images/projects/ut2k4/DM-Legacy/1.jpg",
+      "https://images.maxjonge.com/images/projects/ut2k4/DM-Legacy/2.jpg",
+      "https://images.maxjonge.com/images/projects/ut2k4/DM-Legacy/3.jpg"
     ]
   },
   {
@@ -125,7 +125,7 @@
     "filesize": "45.5mb",
     "description": "A straightforward but effective Invasion RPG map centered around a large rectangular arena. Provides vehicle access and numerous nooks for tactical positioning, making it ideal for vehicle-monster hybrid combat.",
     "publishedDate": "2010-10-05",
-    "projectThumbnail": "ProjectThumbnails/UT2k4/DM-ThePit.jpg",
+    "projectThumbnail": "https://images.maxjonge.com/images/projects/ut2k4/DM-ThePit/1.jpg",
     "minimumPlayer": 4,
     "maximumPlayer": 8,
     "environment": "SciFi",
@@ -144,9 +144,9 @@
       }
     ],
     "images": [
-      "Work_Images/UT2k4/ThePit/1.jpg",
-      "Work_Images/UT2k4/ThePit/2.jpg",
-      "Work_Images/UT2k4/ThePit/3.jpg"
+      "https://images.maxjonge.com/images/projects/ut2k4/DM-ThePit/1.jpg",
+      "https://images.maxjonge.com/images/projects/ut2k4/DM-ThePit/2.jpg",
+      "https://images.maxjonge.com/images/projects/ut2k4/DM-ThePit/3.jpg"
     ]
   },
   {
@@ -155,7 +155,7 @@
     "filesize": "45.5mb",
     "description": "An Egyptian-themed invasion RPG map designed for strategic gameplay. The centerpiece is a trap-enabled floor that, when triggered, opens up and drops all surrounding enemies into a lava pit. Combines ancient aesthetics with functional gameplay mechanics.",
     "publishedDate": "2010-10-12",
-    "projectThumbnail": "ProjectThumbnails/UT2k4/DM-VoteFor.jpg",
+    "projectThumbnail": "https://images.maxjonge.com/images/projects/ut2k4/DM-VoteFor/thumbnail.jpg",
     "minimumPlayer": 4,
     "maximumPlayer": 8,
     "environment": "Ancient",
@@ -174,9 +174,9 @@
       }
     ],
     "images": [
-      "Work_Images/UT2k4/VoteFor/1.jpg",
-      "Work_Images/UT2k4/VoteFor/2.jpg",
-      "Work_Images/UT2k4/VoteFor/3.jpg"
+      "https://images.maxjonge.com/images/projects/ut2k4/DM-VoteFor/1.jpg",
+      "https://images.maxjonge.com/images/projects/ut2k4/DM-VoteFor/2.jpg",
+      "https://images.maxjonge.com/images/projects/ut2k4/DM-VoteFor/3.jpg"
     ]
   }
 ]
