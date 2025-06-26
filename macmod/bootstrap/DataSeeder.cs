@@ -5,6 +5,7 @@ using Microsoft.EntityFrameworkCore;
 using macmod.controllers.dto;
 using macmod.database;
 using macmod.services.entities;
+using macmod.services.Enums;
 using macmod.services.mappers;
 
 namespace macmod.bootstrap;
@@ -103,6 +104,11 @@ public abstract class DataSeeder
         var programmingProjects = (from dto in mapDtos let project = 
                 ProjectMapper.MapProjectFromDto(dto, projectType) select new ProgrammingProject { Purpose = dto.Purpose, Project = project })
             .ToList();
+        
+        foreach (var programmingProject in programmingProjects)
+        {
+            programmingProject.Project.ProjectSubType = ProjectSubType.PROGRAMMINGPROJECT;
+        }
 
         await dbContext.ProgrammingProject.AddRangeAsync(programmingProjects);
         await dbContext.SaveChangesAsync();
@@ -120,8 +126,6 @@ public abstract class DataSeeder
 
         var mapDtos = JsonSerializer.Deserialize<List<GameMapDto>>(mapsJson, jsonOptions);
         var gameMaps = new List<GameMap>();
-
-        var gameTypes = await dbContext.GameTypes.ToListAsync();
         
         foreach (var dto in mapDtos)
         {
@@ -131,6 +135,7 @@ public abstract class DataSeeder
             if (gameType == null) continue;
 
             var project = ProjectMapper.MapProjectFromDto(dto, projectType);
+            project.ProjectSubType = ProjectSubType.GAMEMAP;
             
             await dbContext.Projects.AddAsync(project);
             await dbContext.SaveChangesAsync();

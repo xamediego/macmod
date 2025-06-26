@@ -1,4 +1,5 @@
 using System.ComponentModel.DataAnnotations;
+using macmod.services.Enums;
 
 namespace macmod.controllers.dto;
 
@@ -17,6 +18,7 @@ public class ProjectDto
     public string Filesize { get; set; } = "";
 
     [MaxLength(250, ErrorMessage = "Project thumbnail path cannot exceed 250 characters.")]
+    
     public string ProjectThumbnail { get; set; } = "";
 
     public DateTime PublishedDate { get; set; }
@@ -24,4 +26,8 @@ public class ProjectDto
     public List<LinkDto> Links { get; set; } = [];
 
     public List<string> Images { get; set; } = [];
+
+    public KeyValuePair<string, string>[] ExtraDetails { get; set; } = [];
+
+    public ProjectSubType ProjectSubType;
 }

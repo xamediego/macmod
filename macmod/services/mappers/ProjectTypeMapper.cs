@@ -26,7 +26,8 @@ public static class ProjectTypeMapper
             Title = projectType.Title,
             Thumbnail = projectType.Thumbnail,
             Icon = projectType.Icon,
-            Projects = projects
+            Projects = projects,
+            ProjectCount = projects.Count
         };
     }
 }

@@ -20,11 +20,18 @@ public static class GameMapMapper
     public static GameMapDto MapDtoFromGameMap(GameMap gameMap)
     {
         GameMapDto project = (GameMapDto) ProjectMapper.MapDtoFromProject(gameMap.Project);
+        
+        KeyValuePair<string, string>[] details = [
+            new("Players", $"{gameMap.MinimumPlayer} - {gameMap.MaximumPlayer}"),
+            new("Environment", $"{gameMap.MapEnvironment.ToString()}"),
+            new("GameType", $"{(gameMap.GameType != null ? gameMap.GameType.FullName : "")}")
+        ];
 
         project.MinimumPlayer = gameMap.MinimumPlayer;
         project.MaximumPlayer = gameMap.MaximumPlayer;
         project.GameType = gameMap.GameType != null ? GameTypeMapper.MapDtoFromGameType(gameMap.GameType) : null;
-
+        project.ExtraDetails = details;
+        
         return project;
     }
 }

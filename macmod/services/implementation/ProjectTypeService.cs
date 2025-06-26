@@ -10,7 +10,8 @@ public class ProjectTypeService(DatabaseContext database) : IProjectTypeService
 {
     public async Task<ProjectTypeDto[]> FindAllAsync()
     {
-        return await database.ProjectTypes.Select(pt => ProjectTypeMapper.MapDtoFromProjectType(pt)).ToArrayAsync();
+        return await database.ProjectTypes.Include(pt => pt.Projects)
+            .Select(pt => ProjectTypeMapper.MapDtoFromProjectType(pt)).ToArrayAsync();
     }
 
     public async Task<ProjectTypeDto?> FindByTypeAsync(string type)

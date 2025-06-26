@@ -16,6 +16,7 @@ public static class ProjectMapper
             PublishedDate = dto.PublishedDate,
             ProjectThumbnail = dto.ProjectThumbnail,
             ProjectTypeId = projectType.Id,
+
             Links = dto.Links.Select(link => new Link
             {
                 Provider = link.Provider,
@@ -25,7 +26,9 @@ public static class ProjectMapper
             Images = dto.Images.Select(img => new Image
             {
                 ImageUrl = img
-            }).ToList()
+            }).ToList(),
+            
+            ProjectSubType = dto.ProjectSubType
         };
     }
 
@@ -39,14 +42,15 @@ public static class ProjectMapper
             Description = project.Description,
             PublishedDate = project.PublishedDate,
             ProjectThumbnail = project.ProjectThumbnail,
-            
+
             Links = project.Links.Select(link => new LinkDto
             {
                 Provider = link.Provider,
                 Url = link.Url
             }).ToList(),
 
-            Images = project.Images.Select(img => img.ImageUrl).ToList()
+            Images = project.Images.Select(img => img.ImageUrl).ToList(),
+            ProjectSubType = project.ProjectSubType
         };
     }
 }

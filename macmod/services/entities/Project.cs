@@ -1,5 +1,6 @@
 using System.ComponentModel.DataAnnotations;
 using System.Text.Json.Serialization;
+using macmod.services.Enums;
 
 namespace macmod.services.entities;
 
@@ -23,10 +24,11 @@ public class Project
     [MaxLength(250, ErrorMessage = "Project thumbnail path cannot exceed 250 characters.")]
     public string ProjectThumbnail { get; set; } = "";
 
-    [Required] public DateTime PublishedDate { get; set; } = new();
+    [Required] public DateTime PublishedDate { get; set; }
     
     [JsonIgnore]
     public long ProjectTypeId { get; set;}
+    
     public ProjectType? ProjectType { get; set; }
     
     public List<Link> Links = [];
@@ -34,5 +36,8 @@ public class Project
     public List<Image> Images { get; set; } = [];
     
     public GameMap? GameMap { get; set; }
+    
     public ProgrammingProject? ProgrammingProject { get; set; }
+    
+    public ProjectSubType ProjectSubType { get; set;}
 }

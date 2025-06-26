@@ -15,6 +15,9 @@ public class ProjectTypeDto
 
     [MaxLength(250, ErrorMessage = "Icon path cannot exceed 250 characters.")]
     public string Icon { get; set; } = "";
+    
+    [Range(0, 50000)]
+    public int ProjectCount { get; set;}
 
     public List<ProjectDto> Projects { get; set; } = [];
 }
