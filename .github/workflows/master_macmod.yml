@@ -29,3 +29,4 @@ jobs:
           tags: macmod.azurecr.io/macmod:build-tag-1
           build-args: |
             DATABASE_URL=${{ secrets.SQL_DATABASE }}
+            BLOBCONNECTION= ${{ secrets.AZURE_STORAGE }}
