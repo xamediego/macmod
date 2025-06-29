@@ -38,6 +38,7 @@ public class MacApi
         
         Console.WriteLine("Configure Database");
         builder.Configuration["DATABASE_URL"] = Environment.GetEnvironmentVariable("DATABASE_URL") ?? builder.Configuration["DATABASE_URL"];
+        
         var dbConnection = builder.Configuration["DATABASE_URL"] ?? "";
         Console.WriteLine(dbConnection);
         if (builder.Environment.IsDevelopment())

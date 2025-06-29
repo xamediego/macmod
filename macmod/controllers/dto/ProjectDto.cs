@@ -5,6 +5,8 @@ namespace macmod.controllers.dto;
 
 public class ProjectDto
 {
+    public long Id { get; set; }
+
     [MaxLength(250, ErrorMessage = "Title cannot exceed 250 characters.")]
     public string Title { get; set; } = "";
 
@@ -16,9 +18,11 @@ public class ProjectDto
 
     [MaxLength(100, ErrorMessage = "Filesize cannot exceed 100 characters.")]
     public string Filesize { get; set; } = "";
+    
+    [MaxLength(250, ErrorMessage = "Filesize cannot exceed 250 characters.")]
+    public string FileName { get; set; } = "";
 
     [MaxLength(250, ErrorMessage = "Project thumbnail path cannot exceed 250 characters.")]
-    
     public string ProjectThumbnail { get; set; } = "";
 
     public DateTime PublishedDate { get; set; }
@@ -28,6 +32,7 @@ public class ProjectDto
     public List<string> Images { get; set; } = [];
 
     public KeyValuePair<string, string>[] ExtraDetails { get; set; } = [];
+
 
     public ProjectSubType ProjectSubType;
 }

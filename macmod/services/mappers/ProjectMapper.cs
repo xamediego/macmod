@@ -12,6 +12,7 @@ public static class ProjectMapper
             Title = dto.Title,
             Version = dto.Version,
             Filesize = dto.Filesize,
+            FileName = dto.FileName,
             Description = dto.Description,
             PublishedDate = dto.PublishedDate,
             ProjectThumbnail = dto.ProjectThumbnail,
@@ -36,12 +37,14 @@ public static class ProjectMapper
     {
         return new ProjectDto
         {
+            Id = project.Id,
             Title = project.Title,
             Version = project.Version,
             Filesize = project.Filesize,
             Description = project.Description,
             PublishedDate = project.PublishedDate,
             ProjectThumbnail = project.ProjectThumbnail,
+            FileName = project.FileName,
 
             Links = project.Links.Select(link => new LinkDto
             {

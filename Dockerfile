@@ -20,5 +20,6 @@ COPY --from=publish /app/publish .
 COPY macmod/appsettings.json .
 
 ENV DATABASE_URL=""
+ENV BLOBCONNECTION=""
 
 ENTRYPOINT ["dotnet", "macmod.dll"]

@@ -24,6 +24,9 @@ public class Project
     [MaxLength(250, ErrorMessage = "Project thumbnail path cannot exceed 250 characters.")]
     public string ProjectThumbnail { get; set; } = "";
 
+    [MaxLength(250, ErrorMessage = "Filesize cannot exceed 250 characters.")]
+    public string FileName { get; set; } = "";
+
     [Required] public DateTime PublishedDate { get; set; }
     
     [JsonIgnore]
