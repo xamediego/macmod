@@ -17,6 +17,10 @@ public class MacApi
         
         Console.WriteLine("Is Development: " + builder.Environment.IsDevelopment());
         
+        Console.WriteLine("Validating storage connection");
+        builder.Configuration["BLOBCONNECTION"] = Environment.GetEnvironmentVariable("BLOBCONNECTION") ?? builder.Configuration["BLOBCONNECTION"];
+        Console.WriteLine("Exists: " + (builder.Configuration["BLOBCONNECTION"] != ""));
+        
         Console.WriteLine("Configuring DI Services");
         // Add services to the container.
         builder.Services.AddControllers();
