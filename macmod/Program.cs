@@ -18,7 +18,10 @@ public class MacApi
         Console.WriteLine("Is Development: " + builder.Environment.IsDevelopment());
         
         Console.WriteLine("Validating storage connection");
-        builder.Configuration["BLOBCONNECTION"] = Environment.GetEnvironmentVariable("BLOBCONNECTION") ?? builder.Configuration["BLOBCONNECTION"];
+        string key = "BLOBCONNECTION";
+        string value = Environment.GetEnvironmentVariable("BLOBCONNECTION") ?? builder.Configuration["BLOBCONNECTION"] ?? "";
+        builder.Configuration.AddInMemoryCollection(new Dictionary<string, string?> { { key, value } });
+        
         Console.WriteLine("Exists: " + (builder.Configuration["BLOBCONNECTION"] != ""));
         
         Console.WriteLine("Configuring DI Services");
