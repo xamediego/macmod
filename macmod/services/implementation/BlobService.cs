@@ -6,7 +6,7 @@ namespace macmod.services.implementation;
 
 public class BlobService(IConfiguration configuration) : IBlobService
 {
-    private readonly string _blobConnectionString = configuration["BLOBCONNECTION"] ?? "";
+    private string _blobConnectionString = configuration["BLOBCONNECTION"] ?? "";
 
     public async Task<BlobClient> DownloadAsync(string innerUri, string containerName)
     {
@@ -46,6 +46,9 @@ public class BlobService(IConfiguration configuration) : IBlobService
     
     public Task<BlobContainerClient> CreateBlobContainerClient(string containerName)
     {
+        Console.WriteLine($"Blobconnection exists?: {_blobConnectionString != ""}");
+        if(_blobConnectionString == "") _blobConnectionString = Environment.GetEnvironmentVariable("BLOBCONNECTION") ?? "";
+        
         BlobServiceClient blobServiceClient = new BlobServiceClient(_blobConnectionString);
         BlobContainerClient containerClient = blobServiceClient.GetBlobContainerClient(containerName);
 
