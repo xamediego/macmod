@@ -49,7 +49,7 @@ public class MacApi
         
         var dbConnection = builder.Configuration["DATABASE_URL"] ?? "";
         Console.WriteLine(dbConnection);
-        if (!builder.Environment.IsDevelopment())
+        if (builder.Environment.IsDevelopment())
         {
             builder.Services.AddDbContext<DatabaseContext>(options => options.UseSqlite("Data Source=database.db"));
         }
