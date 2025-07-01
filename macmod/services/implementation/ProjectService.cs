@@ -46,10 +46,9 @@ public class ProjectService(DatabaseContext database, IBlobService blobService) 
     {
         var projects = await database.Projects
             .Where(p => p.IsFeatured)
-            .Include(p => p.Images)
             .ToArrayAsync();
-        
-        return await MapProjectsToDtosAsync(projects);
+
+        return projects.Select(p => ProjectMapper.MapDtoFromProject(p)).ToArray();
     }
 
     public async Task<DownloadResult?> DownloadAsync(long projectId)
@@ -82,6 +81,7 @@ public class ProjectService(DatabaseContext database, IBlobService blobService) 
     private async Task<ProjectDto[]> MapProjectsToDtosAsync(IEnumerable<Project> projects)
     {
         var dtoTasks = projects.Select(MapProjectToDtoAsync);
+        
         return await Task.WhenAll(dtoTasks);
     }
 
