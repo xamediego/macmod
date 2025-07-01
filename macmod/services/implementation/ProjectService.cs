@@ -36,9 +36,19 @@ public class ProjectService(DatabaseContext database, IBlobService blobService) 
             .Include(p => p.ProjectType)
             .Include(p => p.Links)
             .Include(p => p.Images)
-            .Where(p => p.ProjectType.Type == type)
+            .Where(p => p.ProjectType != null && p.ProjectType.Type == type)
             .ToArrayAsync();
 
+        return await MapProjectsToDtosAsync(projects);
+    }
+
+    public async Task<ProjectDto[]> FindFeaturedAsync()
+    {
+        var projects = await database.Projects
+            .Where(p => p.IsFeatured)
+            .Include(p => p.Images)
+            .ToArrayAsync();
+        
         return await MapProjectsToDtosAsync(projects);
     }
 
@@ -137,5 +147,4 @@ public class ProjectService(DatabaseContext database, IBlobService blobService) 
         var gameMap = await database.GameMaps.Where(g => g.ProjectId == projectId).Include(g => g.GameType).FirstOrDefaultAsync();
         return gameMap is { GameType: not null } ? (gameMap.GameType.Identifier + "/") : "";
     }
-    
 }

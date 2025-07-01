@@ -2,6 +2,7 @@ using macmod.bootstrap;
 using macmod.database;
 using macmod.services.implementation;
 using macmod.services.interfaces;
+
 using Microsoft.EntityFrameworkCore;
 using Microsoft.OpenApi.Models;
 
@@ -48,7 +49,7 @@ public class MacApi
         
         var dbConnection = builder.Configuration["DATABASE_URL"] ?? "";
         Console.WriteLine(dbConnection);
-        if (builder.Environment.IsDevelopment())
+        if (!builder.Environment.IsDevelopment())
         {
             builder.Services.AddDbContext<DatabaseContext>(options => options.UseSqlite("Data Source=database.db"));
         }
@@ -105,6 +106,7 @@ public class MacApi
         
         //Start building
         var app = builder.Build();
+        
         
         //Test DB Connection
         if (!app.Environment.IsDevelopment())

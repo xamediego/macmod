@@ -21,6 +21,8 @@ public class ProjectDto
     
     [MaxLength(250, ErrorMessage = "Filesize cannot exceed 250 characters.")]
     public string FileName { get; set; } = "";
+    
+    public bool IsFeatured { get; set;}
 
     [MaxLength(250, ErrorMessage = "Project thumbnail path cannot exceed 250 characters.")]
     public string ProjectThumbnail { get; set; } = "";
@@ -32,7 +34,6 @@ public class ProjectDto
     public List<string> Images { get; set; } = [];
 
     public KeyValuePair<string, string>[] ExtraDetails { get; set; } = [];
-
-
+    
     public ProjectSubType ProjectSubType;
 }

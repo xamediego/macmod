@@ -23,6 +23,17 @@ public class ProjectController(IProjectService projectService)
         return result != null ? Ok(result) : NotFound();
     }
 
+    [HttpGet("projectType/{type}")]
+    public async Task<ActionResult<ProjectDto[]>> FindAll(string type)
+    {
+        return Ok(await projectService.FindByProjectTypeAsync(type));
+    }
+
+    [HttpGet("featured")] public async Task<ActionResult<ProjectDto[]>> GetFeaturedAll()
+    {
+        return Ok(await projectService.FindFeaturedAsync());
+    }
+    
     [HttpGet("download/{title}/{projectId}")]
     public async Task<ActionResult<Stream?>> Download(string title, long projectId)
     {
@@ -32,18 +43,12 @@ public class ProjectController(IProjectService projectService)
 
             return 
                 downloadResult == null ? 
-                NotFound() : 
-                File(downloadResult.FileStream, downloadResult.ContentType, downloadResult.FileName, true);
+                    NotFound() : 
+                    File(downloadResult.FileStream, downloadResult.ContentType, downloadResult.FileName, true);
         }
         catch (Exception ex)
         {
             return StatusCode(500, $"Error while downloading: {ex.Message}");
         }
-    }
-
-    [HttpGet("projectType/{type}")]
-    public async Task<ActionResult<ProjectDto[]>> FindAll(string type)
-    {
-        return Ok(await projectService.FindByProjectTypeAsync(type));
     }
 }

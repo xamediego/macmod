@@ -17,6 +17,7 @@ public static class ProjectMapper
             PublishedDate = dto.PublishedDate,
             ProjectThumbnail = dto.ProjectThumbnail,
             ProjectTypeId = projectType.Id,
+            IsFeatured = dto.IsFeatured,
 
             Links = dto.Links.Select(link => new Link
             {
@@ -45,6 +46,7 @@ public static class ProjectMapper
             PublishedDate = project.PublishedDate,
             ProjectThumbnail = project.ProjectThumbnail,
             FileName = project.FileName,
+            IsFeatured = project.IsFeatured,
 
             Links = project.Links.Select(link => new LinkDto
             {

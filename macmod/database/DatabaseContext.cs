@@ -1,4 +1,5 @@
 using macmod.services.entities;
+
 using Microsoft.EntityFrameworkCore;
 
 namespace macmod.database;

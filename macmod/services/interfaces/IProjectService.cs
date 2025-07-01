@@ -10,6 +10,8 @@ public interface IProjectService
     Task<ProjectDto?> FindByTitleAsync(string title);
     
     Task<ProjectDto[]> FindByProjectTypeAsync(string type);
+    
+    Task<ProjectDto[]> FindFeaturedAsync();
 
     Task<DownloadResult?> DownloadAsync(long projectId);
 }

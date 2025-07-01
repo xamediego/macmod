@@ -29,6 +29,8 @@ public class Project
 
     [Required] public DateTime PublishedDate { get; set; }
     
+    public bool IsFeatured { get; set; }
+    
     [JsonIgnore]
     public long ProjectTypeId { get; set;}
     
