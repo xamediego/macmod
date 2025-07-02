@@ -46,9 +46,20 @@ public class ProjectService(DatabaseContext database, IBlobService blobService) 
     {
         var projects = await database.Projects
             .Where(p => p.IsFeatured)
-            .ToArrayAsync();
+            .Include(p => p.ProjectType) // Ensure ProjectType is loaded
+            .ToListAsync();
 
-        return projects.Select(p => ProjectMapper.MapDtoFromProject(p)).ToArray();
+        // hackjob
+        var sortedProjects = projects
+            .OrderBy(p => p.ProjectType.Type == "java" ? 0 : p.ProjectType.Type == "udk" ? 1 : 2)
+            .Reverse()
+            .ToArray();
+
+        var mapped = sortedProjects
+            .Select(ProjectMapper.MapDtoFromProject)
+            .ToArray();
+
+        return mapped;
     }
 
     public async Task<DownloadResult?> DownloadAsync(long projectId)
